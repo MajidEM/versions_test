@@ -9,7 +9,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    ignore:
-      - dependency-name: "python"
-        # Ignore all Python versions except 3.9.x
-        versions: ["3.13.*"]
+    allow:
+      - dependency-type: "python"
+        # allow only Python versions except 3.9.x
+        versions: ["3.9.*"]
