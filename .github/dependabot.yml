@@ -5,7 +5,11 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "docker"
+    directory: "/"
     schedule:
       interval: "daily"
+    ignore:
+      - dependency-name: "python"
+        # Ignore all Python versions except 3.9.x
+        versions: ["3.10","3.11","3.12","3.13","3.14"]
