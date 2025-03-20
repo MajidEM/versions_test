@@ -10,6 +10,6 @@ updates:
     schedule:
       interval: "daily"
     allow:
-      - dependency-type: "python"
+      - dependency-type: "all"
         # allow only Python versions except 3.9.x
         versions: ["3.9.*"]
