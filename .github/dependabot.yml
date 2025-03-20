@@ -9,7 +9,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    allow:
-      - dependency-type: "all"
-        # allow only Python versions except 3.9.x
-        version: "3.9.*"
+    ignore:
+      - dependency-name: "python"
+        # Block all tags except 3.9.x using regex
+        version: "/^(?!3\.9\.).*/"
